@@ -1,0 +1,237 @@
+/* styles/animations.css */
+/* 1. NEUMORFISMO */
+.neumorphic {
+    background: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 
+        5px 5px 10px #d1d1d1,
+        -5px -5px 10px #ffffff;
+    transition: var(--transition);
+}
+
+.neumorphic:hover {
+    box-shadow:
+        8px 8px 15px #d1d1d1,
+        -8px -8px 15px #ffffff;
+    transform: translateY(-2px);
+}
+
+/* 2. 3D CARD FLIP */
+.card-3d {
+    perspective: 1000px;
+}
+
+.card-3d .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-3d:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-3d .card-front,
+.card-3d .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+}
+
+.card-3d .card-back {
+    transform: rotateY(180deg);
+    background-color: var(--pistache-dark);
+    color: white;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 3. SCROLL-TRIGGERED ANIMATIONS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 4. LIQUID HOVER EFFECT (Spotify-style) */
+.liquid-btn {
+    position: relative;
+    overflow: hidden;
+    background: var(--pistache-dark);
+    color: white;
+    z-index: 1;
+}
+
+.liquid-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.liquid-btn:hover::before {
+    left: 100%;
+}
+
+.liquid-btn:hover {
+    transform: scale(1.05);
+}
+
+/* 5. NEON GLOW BUTTONS (Cyberpunk/TikTok style) */
+.neon-btn {
+    background-color: transparent;
+    color: #00f3ff;
+    border: 2px solid #00f3ff;
+    box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff, 0 0 30px #00f3ff;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00f3ff;
+}
+
+.neon-btn:hover {
+    box-shadow: 0 0 15px #00f3ff, 0 0 25px #00f3ff, 0 0 35px #00f3ff;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+    transform: scale(1.05);
+}
+
+/* 6. FLOATING SOCIAL ICONS */
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-icon:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* 7. DARK/LIGHT MODE TOGGLE ANIMATION */
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.theme-toggle.dark {
+    background: #333;
+}
+
+.theme-toggle.dark::before {
+    transform: translateX(30px);
+}
+
+/* 8. PARTICLE.JS BACKGROUND (opcional - requiere librería) */
+.particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* 9. PARALLAX EFFECT */
+.parallax-container {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+
+/* 10. TEXT GLOW ANIMATION */
+.text-glow {
+    color: #fff;
+    text-shadow: 0 0 5px #00f3ff, 0 0 10px #00f3ff, 0 0 15px #00f3ff;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 5px #00f3ff, 0 0 10px #00f3ff;
+    }
+    to {
+        text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff, 0 0 30px #00f3ff;
+    }
+}

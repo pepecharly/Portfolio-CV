@@ -1,0 +1,44 @@
+/* styles/themes/principal.css */
+:root {
+    --bg: #f8f9fa;
+    --card-bg: white;
+    --text: #1d1d1f;
+    --btn-primary: var(--pistache-dark);
+    --btn-secondary: #f8f9fa;
+    --border: #ddd;
+    --empty-icon: #ddd;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+}
+
+.bg-white, .card, .project-card, .skill-item {
+    background-color: var(--card-bg);
+    color: var(--text);
+}
+
+input, textarea, select {
+    border: 1px solid var(--border);
+    background-color: white;
+    color: var(--text);
+}
+
+.nav-item.active {
+    background-color: var(--pistache-light);
+    color: var(--pistache-dark);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary);
+    color: var(--text);
+    border: 1px solid var(--border);
+}

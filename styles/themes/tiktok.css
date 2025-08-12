@@ -1,0 +1,36 @@
+/* styles/themes/tiktok.css */
+:root {
+    --bg: #000000;
+    --card-bg: #111;
+    --text: #ffffff;
+    --accent: #fe2c55;
+    --neon-blue: #00f3ff;
+    --neon-purple: #b02cd4;
+    --btn-primary: #fe2c55;
+    --btn-secondary: #333;
+}
+
+body {
+    background: linear-gradient(135deg, #000, #111);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--neon-blue), var(--accent));
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(176, 44, 212, 0.8);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px rgba(0, 243, 255, 0.6); }
+    50% { box-shadow: 0 0 30px rgba(176, 44, 212, 0.9); }
+    100% { box-shadow: 0 0 15px rgba(0, 243, 255, 0.6); }
+}

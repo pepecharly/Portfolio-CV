@@ -1,0 +1,85 @@
+<!-- modules/contacto.html -->
+<section id="contact-section" class="tab-content hidden">
+    <div class="bg-white shadow-sm rounded-lg p-6 mb-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                <i class="fas fa-envelope mr-2"></i>
+                <span data-i18n="contact">Contacto</span>
+            </h2>
+            <div>
+                <button id="addContactBtn" class="btn btn-primary login-required mr-2 flex items-center">
+                    <i class="fas fa-plus mr-2"></i>
+                    <span data-i18n="newContact">Nuevo contacto</span>
+                </button>
+                <button id="sendMessageBtn" class="btn btn-secondary login-required flex items-center">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    <span data-i18n="send">Enviar mensaje</span>
+                </button>
+            </div>
+        </div>
+        <div id="contactList" class="mb-6"></div>
+        <div id="contactForm" class="bg-gray-50 rounded-lg p-6 mb-6 hidden">
+            <h3 class="text-lg font-semibold mb-4"><span data-i18n="newContact">Nuevo medio de contacto</span></h3>
+            <form id="contactFormContent">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="form-group">
+                        <label for="contactType"><span data-i18n="type">Tipo</span></label>
+                        <select id="contactType" required>
+                            <option value=""><span data-i18n="selectType">Selecciona un tipo</span></option>
+                            <option value="email"><span data-i18n="email">Correo electrónico</span></option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="github">GitHub</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="wechat">WeChat</option>
+                            <option value="telegram">Telegram</option>
+                            <option value="snapchat">Snapchat</option>
+                            <option value="twitter">X (Twitter)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactValue"><span data-i18n="value">Valor</span></label>
+                        <input type="text" id="contactValue" required>
+                    </div>
+                </div>
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelContactBtn" class="btn btn-secondary"><span data-i18n="cancel">Cancelar</span></button>
+                    <button type="submit" class="btn btn-primary"><span data-i18n="save">Guardar</span></button>
+                </div>
+            </form>
+        </div>
+        <div id="messageForm" class="bg-gray-50 rounded-lg p-6 mb-6 hidden">
+            <h3 class="text-lg font-semibold mb-4"><span data-i18n="send">Enviar mensaje</span></h3>
+            <form action="https://formsubmit.co/pepecharly@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://tu-sitio.com/gracias.html">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde tu sitio web">
+                <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Me pondré en contacto contigo lo antes posible.">
+                <input type="hidden" name="_template" value="table">
+                <div class="form-group">
+                    <label for="messageName"><span data-i18n="name">Nombre</span></label>
+                    <input type="text" name="name" id="messageName" required>
+                </div>
+                <div class="form-group">
+                    <label for="messageEmail"><span data-i18n="email">Correo Electrónico</span></label>
+                    <input type="email" name="email" id="messageEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="messageContent"><span data-i18n="message">Mensaje</span></label>
+                    <textarea name="message" id="messageContent" data-i18n-placeholder="message" required rows="5"></textarea>
+                </div>
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelMessageBtn" class="btn btn-secondary"><span data-i18n="cancel">Cancelar</span></button>
+                    <button type="submit" class="btn btn-primary"><span data-i18n="send">Enviar Mensaje</span></button>
+                </div>
+            </form>
+        </div>
+        <div id="contactEmptyState" class="empty-state">
+            <i class="fas fa-address-book"></i>
+            <h3 class="text-lg font-semibold"><span data-i18n="emptyContact">No tienes medios de contacto agregados</span></h3>
+            <p><span data-i18n="add">Añade</span> tus medios de contacto</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+<!-- modules/habilidades.html -->
+<section id="skills-section" class="tab-content hidden">
+    <div class="bg-white shadow-sm rounded-lg p-6 mb-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                <i class="fas fa-toolbox mr-2"></i>
+                <span data-i18n="skills">Habilidades Técnicas</span>
+            </h2>
+            <button id="addSkillBtn" class="btn btn-primary login-required flex items-center">
+                <i class="fas fa-plus mr-2"></i>
+                <span data-i18n="add">Añadir habilidad</span>
+            </button>
+        </div>
+        <div id="skillForm" class="bg-gray-50 rounded-lg p-6 mb-6 hidden">
+            <h3 class="text-lg font-semibold mb-4"><span data-i18n="add">Nueva</span> <span data-i18n="skills">habilidad</span></h3>
+            <form id="skillFormContent">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="form-group">
+                        <label for="skillCategory"><span data-i18n="category">Categoría</span></label>
+                        <select id="skillCategory" required>
+                            <option value=""><span data-i18n="selectCategory">Selecciona una categoría</span></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="skillTool"><span data-i18n="tool">Herramienta</span></label>
+                        <input type="text" id="skillTool" list="toolSuggestions" data-i18n-placeholder="tool" required>
+                        <datalist id="toolSuggestions"></datalist>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experienceYears"><span data-i18n="experienceYears">Experiencia (años)</span></label>
+                    <input type="number" id="experienceYears" min="0" max="50" placeholder="Ej: 3" required>
+                </div>
+                <div class="form-group">
+                    <label for="skillLevel"><span data-i18n="level">Nivel</span></label>
+                    <select id="skillLevel" required>
+                        <option value=""><span data-i18n="selectLevel">Selecciona un nivel</span></option>
+                        <option value="beginner"><span data-i18n="beginner">Principiante</span></option>
+                        <option value="intermediate"><span data-i18n="intermediate">Intermedio</span></option>
+                        <option value="advanced"><span data-i18n="advanced">Avanzado</span></option>
+                        <option value="expert"><span data-i18n="expert">Experto</span></option>
+                    </select>
+                </div>
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelSkillBtn" class="btn btn-secondary"><span data-i18n="cancel">Cancelar</span></button>
+                    <button type="submit" class="btn btn-primary"><span data-i18n="save">Guardar</span></button>
+                </div>
+            </form>
+        </div>
+        <div id="skillsList" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        <div id="skillsEmptyState" class="empty-state">
+            <i class="fas fa-star"></i>
+            <h3 class="text-lg font-semibold"><span data-i18n="emptySkills">No tienes habilidades agregadas</span></h3>
+            <p><span data-i18n="add">Añade</span> tus habilidades técnicas</p>
+        </div>
+    </div>
+</section>

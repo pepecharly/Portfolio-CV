@@ -1,0 +1,30 @@
+/* styles/base/variables.css */
+:root {
+    /* Paleta principal (pistache) */
+    --pistache: #a2d48c;
+    --pistache-dark: #81b06f;
+    --pistache-light: #b8e0a9;
+
+    /* Tipografía */
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    /* Espaciado */
+    --gap-sm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 2rem;
+
+    /* Sombra */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+    /* Transiciones */
+    --transition: all 0.3s ease;
+    --transition-fast: all 0.15s ease;
+}
+
+/* Accesibilidad: Alto contraste (se puede activar con clase) */
+.high-contrast {
+    --pistache: #0000ff;
+    --pistache-dark: #0000cc;
+    --pistache-light: #cce6ff;
+}

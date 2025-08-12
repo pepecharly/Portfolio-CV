@@ -1,0 +1,52 @@
+<!-- modules/certificaciones.html -->
+<section id="courses-section" class="tab-content hidden">
+    <div class="bg-white shadow-sm rounded-lg p-6 mb-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                <i class="fas fa-certificate mr-2"></i>
+                <span data-i18n="courses">Cursos y Certificaciones</span>
+            </h2>
+            <button id="addCourseBtn" class="btn btn-primary login-required flex items-center">
+                <i class="fas fa-plus mr-2"></i>
+                <span data-i18n="add">Añadir curso</span>
+            </button>
+        </div>
+        <div id="courseForm" class="bg-gray-50 rounded-lg p-6 mb-6 hidden">
+            <h3 class="text-lg font-semibold mb-4"><span data-i18n="add">Nuevo</span> <span data-i18n="courses">curso</span></h3>
+            <form id="courseFormContent">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="form-group">
+                        <label for="courseName"><span data-i18n="course">Curso</span></label>
+                        <input type="text" id="courseName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="school"><span data-i18n="school">Institución</span></label>
+                        <input type="text" id="school" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coursePeriod"><span data-i18n="period">Periodo</span></label>
+                        <input type="text" id="coursePeriod" data-i18n-placeholder="period" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="courseTools"><span data-i18n="tools">Herramientas clave</span></label>
+                        <input type="text" id="courseTools" data-i18n-placeholder="tools">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="courseDescription"><span data-i18n="description">Descripción</span></label>
+                    <textarea id="courseDescription" data-i18n-placeholder="description"></textarea>
+                </div>
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelCourseBtn" class="btn btn-secondary"><span data-i18n="cancel">Cancelar</span></button>
+                    <button type="submit" class="btn btn-primary"><span data-i18n="save">Guardar</span></button>
+                </div>
+            </form>
+        </div>
+        <div id="courseList"></div>
+        <div id="courseEmptyState" class="empty-state">
+            <i class="fas fa-graduation-cap"></i>
+            <h3 class="text-lg font-semibold"><span data-i18n="emptyCourses">No tienes cursos agregados</span></h3>
+            <p><span data-i18n="add">Añade</span> tus cursos y certificaciones</p>
+        </div>
+    </div>
+</section>

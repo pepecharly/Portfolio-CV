@@ -1,0 +1,42 @@
+<!-- modules/proyectos.html -->
+<section id="projects-section" class="tab-content hidden">
+    <div class="bg-white shadow-sm rounded-lg p-6 mb-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                <i class="fas fa-project-diagram mr-2"></i>
+                <span data-i18n="projects">Proyectos Destacados</span>
+            </h2>
+            <button id="addProjectBtn" class="btn btn-primary login-required flex items-center">
+                <i class="fas fa-plus mr-2"></i>
+                <span data-i18n="add">Añadir proyecto</span>
+            </button>
+        </div>
+        <div id="projectForm" class="bg-gray-50 rounded-lg p-6 mb-6 hidden">
+            <h3 class="text-lg font-semibold mb-4"><span data-i18n="add">Nuevo</span> <span data-i18n="projects">proyecto</span></h3>
+            <form id="projectFormContent">
+                <div class="form-group">
+                    <label for="projectTitle"><span data-i18n="projectTitle">Título del Proyecto</span></label>
+                    <input type="text" id="projectTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription"><span data-i18n="description">Descripción</span></label>
+                    <textarea id="projectDescription" data-i18n-placeholder="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectTools"><span data-i18n="tools">Herramientas Utilizadas</span></label>
+                    <input type="text" id="projectTools" data-i18n-placeholder="tools">
+                </div>
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelProjectBtn" class="btn btn-secondary"><span data-i18n="cancel">Cancelar</span></button>
+                    <button type="submit" class="btn btn-primary"><span data-i18n="save">Guardar Proyecto</span></button>
+                </div>
+            </form>
+        </div>
+        <div id="projectList"></div>
+        <div id="projectEmptyState" class="empty-state">
+            <i class="fas fa-project-diagram"></i>
+            <h3 class="text-lg font-semibold"><span data-i18n="emptyProjects">No tienes proyectos agregados</span></h3>
+            <p><span data-i18n="add">Añade</span> tus proyectos destacados</p>
+        </div>
+    </div>
+</section>

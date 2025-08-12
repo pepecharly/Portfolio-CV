@@ -1,0 +1,35 @@
+/* styles/themes/linkedin.css */
+:root {
+    --linkedin-blue: #0a66c2;
+    --linkedin-dark: #000000;
+    --linkedin-gray: #f8f9fa;
+    --bg: white;
+    --card-bg: white;
+    --text: #000000;
+    --btn-primary: var(--linkedin-blue);
+    --btn-secondary: var(--linkedin-gray);
+    --border: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.nav-item.active {
+    background-color: var(--linkedin-blue);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--linkedin-blue);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--linkedin-gray);
+    color: var(--text);
+    border: 1px solid var(--border);
+}

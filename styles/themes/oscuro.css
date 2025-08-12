@@ -1,0 +1,42 @@
+/* styles/themes/oscuro.css */
+:root {
+    --bg: #121212;
+    --card-bg: #1e1e1e;
+    --text: #e0e0e0;
+    --btn-primary: #a2d48c;
+    --btn-secondary: #2d2d2d;
+    --border: #333;
+    --empty-icon: #444;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.bg-white, .card, .project-card, .skill-item {
+    background-color: var(--card-bg);
+    color: var(--text);
+}
+
+input, textarea, select {
+    background-color: #2d2d2d;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.nav-item.active {
+    background-color: var(--btn-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary);
+    color: var(--text);
+}

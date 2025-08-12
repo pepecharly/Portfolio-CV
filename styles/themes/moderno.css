@@ -1,0 +1,26 @@
+/* styles/themes/moderno.css */
+:root {
+    --bg: #fafafa;
+    --card-bg: white;
+    --text: #2d2d2d;
+    --accent: #6c5ce7;
+    --btn-primary: #6c5ce7;
+    --btn-secondary: #f1f2f6;
+    --border: #ddd;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+.card, .project-card {
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}

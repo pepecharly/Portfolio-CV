@@ -1,0 +1,144 @@
+{
+  "about": {
+    "es": "Soy Ingeniero en Sistemas Computacionales con más de 10 años de experiencia en ingeniería de datos, automatización de procesos ETL y arquitectura de soluciones Big Data. He liderado proyectos en empresas como Walmart, Chedraui y Pepsico, utilizando herramientas como DataStage, Hive, BigQuery, Airflow, y GCP.",
+    "en": "I'm a Computer Systems Engineer with over 10 years of experience in data engineering, ETL process automation, and Big Data solution architecture. I've led projects at companies like Walmart, Chedraui, and Pepsico, using tools such as DataStage, Hive, BigQuery, Airflow, and GCP."
+  },
+  "image": "assets/images/JCCR.png",
+  "experiences": [
+    {
+      "position": {
+        "es": "Ingeniero de Datos",
+        "en": "Data Engineer"
+      },
+      "company": "Walmart México",
+      "project": {
+        "es": "Migración de ETL a GCP",
+        "en": "ETL Migration to GCP"
+      },
+      "period": "Ene 2020 - Actual",
+      "country": "México",
+      "activities": {
+        "es": "Lideré la migración de flujos ETL de DataStage a Airflow en GCP. Optimicé tiempos de carga en un 40% usando BigQuery y Pub/Sub.",
+        "en": "Led the migration of ETL flows from DataStage to Airflow on GCP. Optimized load times by 40% using BigQuery and Pub/Sub."
+      },
+      "tools": "GCP, Airflow, BigQuery, DataStage, Python"
+    },
+    {
+      "position": {
+        "es": "Analista de Datos",
+        "en": "Data Analyst"
+      },
+      "company": "Chedraui",
+      "project": {
+        "es": "Dashboard de Ventas",
+        "en": "Sales Dashboard"
+      },
+      "period": "Mar 2018 - Dic 2019",
+      "country": "México",
+      "activities": {
+        "es": "Desarrollé dashboards en Tableau para monitorear ventas y KPIs. Automatización de reportes con Python.",
+        "en": "Developed Tableau dashboards to monitor sales and KPIs. Automated reports using Python."
+      },
+      "tools": "Tableau, Python, SQL"
+    }
+  ],
+  "skills": [
+    {
+      "category": {
+        "es": "Base de datos",
+        "en": "Database"
+      },
+      "tool": "BigQuery",
+      "experienceYears": 5,
+      "skillLevel": "expert"
+    },
+    {
+      "category": {
+        "es": "ETL/Orquestación",
+        "en": "ETL/Orchestration"
+      },
+      "tool": "Apache Airflow",
+      "experienceYears": 4,
+      "skillLevel": "advanced"
+    },
+    {
+      "category": {
+        "es": "Visualización",
+        "en": "Visualization"
+      },
+      "tool": "Looker",
+      "experienceYears": 3,
+      "skillLevel": "intermediate"
+    }
+  ],
+  "courses": [
+    {
+      "courseName": {
+        "es": "Google Cloud Professional Data Engineer",
+        "en": "Google Cloud Professional Data Engineer"
+      },
+      "school": "Coursera",
+      "coursePeriod": "2022",
+      "courseDescription": {
+        "es": "Certificación oficial de Google en ingeniería de datos en la nube.",
+        "en": "Official Google certification in cloud data engineering."
+      },
+      "courseTools": "GCP, BigQuery, Pub/Sub, Dataflow"
+    },
+    {
+      "courseName": {
+        "es": "Apache Spark y Scala",
+        "en": "Apache Spark and Scala"
+      },
+      "school": "Udemy",
+      "coursePeriod": "2021",
+      "courseDescription": {
+        "es": "Curso avanzado de procesamiento de datos en tiempo real.",
+        "en": "Advanced course on real-time data processing."
+      },
+      "courseTools": "Spark, Scala, Kafka"
+    }
+  ],
+  "projects": [
+    {
+      "title": {
+        "es": "Dashboard de Monitoreo ETL",
+        "en": "ETL Monitoring Dashboard"
+      },
+      "description": {
+        "es": "Desarrollé un dashboard en Looker para monitorear en tiempo real el estado de 200+ flujos ETL.",
+        "en": "Developed a Looker dashboard to monitor in real-time the status of 200+ ETL flows."
+      },
+      "tools": "Looker, GCP, Airflow"
+    },
+    {
+      "title": {
+        "es": "Automatización de Reportes",
+        "en": "Report Automation"
+      },
+      "description": {
+        "es": "Automatización de 10 reportes diarios usando Python y Airflow.",
+        "en": "Automated 10 daily reports using Python and Airflow."
+      },
+      "tools": "Python, Airflow, Excel"
+    }
+  ],
+  "contacts": [
+    {
+      "type": "email",
+      "value": "pepecharly@gmail.com"
+    },
+    {
+      "type": "linkedin",
+      "value": "linkedin.com/in/pepecharly"
+    },
+    {
+      "type": "github",
+      "value": "github.com/pepecharly"
+    },
+    {
+      "type": "whatsapp",
+      "value": "https://wa.me/5511833799"
+    }
+  ]
+}

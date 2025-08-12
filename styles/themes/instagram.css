@@ -1,0 +1,28 @@
+/* styles/themes/instagram.css */
+:root {
+    --bg: #fff;
+    --card-bg: white;
+    --text: #262626;
+    --gradient-start: #833ab4;
+    --gradient-mid: #fd1d1d;
+    --gradient-end: #fcb045;
+    --btn-primary: #0095f6;
+}
+
+body {
+    background: linear-gradient(135deg, #fafafa, #fff);
+    color: var(--text);
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    color: white;
+}

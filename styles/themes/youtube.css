@@ -1,0 +1,26 @@
+/* styles/themes/youtube.css */
+:root {
+    --bg: #ffffff;
+    --card-bg: white;
+    --text: #030303;
+    --youtube-red: #ff0000;
+    --btn-primary: #ff0000;
+    --btn-secondary: #f0f0f0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.nav-item.active {
+    border-left: 3px solid var(--youtube-red);
+    color: var(--youtube-red);
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--youtube-red);
+    color: white;
+}

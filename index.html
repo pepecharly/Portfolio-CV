@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil Profesional - José Carlos Castillo</title>
+
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="styles/base/reset.css" />
+    <link rel="stylesheet" href="styles/base/variables.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+
+    <!-- Tema por defecto -->
+    <link rel="stylesheet" href="styles/themes/principal.css" id="theme-style" />
+
+    <!-- Layouts -->
+    <link rel="stylesheet" href="styles/layouts/mobile.css" />
+    <link rel="stylesheet" href="styles/layouts/print.css" />
+
+    <!-- Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Tailwind (opcional) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            transition: background-color 0.5s ease;
+        }
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-primary {
+            background-color: var(--pistache-dark);
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #f8f9fa;
+            color: #1d1d1f;
+            border: 1px solid #ddd;
+        }
+        .nav-item {
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            color: #555;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background-color: #f1f5f9;
+        }
+        .nav-item.active {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="flex gap-8">
+            <!-- Sidebar -->
+            <aside class="w-64 flex-shrink-0">
+                <div class="bg-white shadow-sm rounded-lg p-6 mb-6 sticky top-4">
+                    <!-- Foto de perfil -->
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img id="profileImage" src="assets/images/JCCR.png" alt="José Carlos" class="w-16 h-16 rounded-full object-cover profile-image">
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-900">José Carlos</h2>
+                            <p class="text-sm text-gray-600">Data Engineer</p>
+                        </div>
+                    </div>
+
+                    <!-- Controles rápidos -->
+                    <div class="flex flex-col space-y-2 mb-4">
+                        <button id="langToggle" class="btn btn-secondary text-sm px-3 py-1 flex items-center justify-center">
+                            <i class="fas fa-language mr-2"></i> ES / EN
+                        </button>
+
+                        <!-- Selector de temas con iconos -->
+                        <div class="p-3 bg-gray-50 rounded-lg">
+                            <label class="block text-xs font-semibold text-gray-700 mb-2 flex items-center">
+                                <i class="fas fa-palette mr-2"></i> Tema
+                            </label>
+                            <div class="relative">
+                                <button 
+                                    id="themeDropdown" 
+                                    class="w-full text-left px-3 py-2 rounded border border-gray-300 bg-white flex items-center gap-2 text-sm"
+                                    aria-haspopup="listbox"
+                                    aria-expanded="false">
+                                    <span id="themePreview" class="w-4 h-4 rounded" style="background-color: #a2d48c;"></span>
+                                    <span id="themeName">Verde Pistache</span>
+                                    <i class="fas fa-chevron-down ml-auto text-gray-500"></i>
+                                </button>
+                                <ul 
+                                    id="themeOptions" 
+                                    class="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded shadow-lg max-h-60 overflow-auto hidden"
+                                    role="listbox">
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Botones de descarga -->
+                        <button onclick="generatePDF()" class="btn btn-primary text-sm px-3 py-1 flex items-center justify-center">
+                            <i class="fas fa-file-pdf mr-2"></i> PDF
+                        </button>
+                        <button onclick="generateDOCX()" class="btn btn-secondary text-sm px-3 py-1 flex items-center justify-center">
+                            <i class="fas fa-file-word mr-2"></i> DOCX
+                        </button>
+                    </div>
+
+                    <!-- Menú de navegación -->
+                    <nav class="space-y-2">
+                        <div class="nav-item active" data-tab="about">
+                            <i class="fas fa-user"></i> <span data-i18n="about">Acerca de mí</span>
+                        </div>
+                        <div class="nav-item" data-tab="experience">
+                            <i class="fas fa-briefcase"></i> <span data-i18n="experience">Experiencia</span>
+                        </div>
+                        <div class="nav-item" data-tab="skills">
+                            <i class="fas fa-toolbox"></i> <span data-i18n="skills">Habilidades</span>
+                        </div>
+                        <div class="nav-item" data-tab="courses">
+                            <i class="fas fa-certificate"></i> <span data-i18n="courses">Certificaciones</span>
+                        </div>
+                        <div class="nav-item" data-tab="projects">
+                            <i class="fas fa-project-diagram"></i> <span data-i18n="projects">Proyectos</span>
+                        </div>
+                        <div class="nav-item" data-tab="contact">
+                            <i class="fas fa-envelope"></i> <span data-i18n="contact">Contacto</span>
+                        </div>
+                        <div id="loginLogoutItem" class="nav-item" data-tab="login">
+                            <i class="fas fa-sign-in-alt"></i> <span data-i18n="login">Login</span>
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1">
+                <!-- Acerca de mí -->
+                <section id="about-section" class="tab-content active">
+                    <div class="bg-white shadow-sm rounded-lg p-6 mb-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                                <i class="fas fa-user mr-2"></i>
+                                <span data-i18n="about">Acerca de mí</span>
+                            </h2>
+                            <button id="editAboutBtn" class="btn btn-secondary login-required">
+                                <span data-i18n="edit">Editar</span>
+                            </button>
+                        </div>
+                        <div id="aboutContent" class="about-content"></div>
+                        <div id="aboutForm" class="hidden mt-4">
+                            <form id="aboutFormContent">
+                                <div class="form-group">
+                                    <label for="aboutInput"><span data-i18n="description">Descripción</span></label>
+                                    <textarea id="aboutInput" rows="6" class="w-full"></textarea>
+                                </div>
+                                <div class="flex justify-end space-x-3 pt-4">
+                                    <button type="button" id="cancelAboutBtn" class="btn btn-secondary">
+                                        <span data-i18n="cancel">Cancelar</span>
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <span data-i18n="save">Guardar</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Módulos cargados dinámicamente -->
+                <div id="dynamic-content"></div>
+            </main>
+        </div>
+
+        <footer class="text-center text-gray-500 text-sm mt-8">
+            © 2025 Perfil Profesional de José Carlos Castillo
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/libs/html2pdf.js" defer></script>
+    <script src="scripts/libs/docx.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</body>
+</html>

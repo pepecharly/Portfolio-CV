@@ -1,0 +1,26 @@
+/* styles/themes/discord.css */
+:root {
+    --bg: #36393f;
+    --card-bg: #2f3136;
+    --text: #dcddde;
+    --discord-blurple: #7289da;
+    --btn-primary: #7289da;
+    --btn-secondary: #4f545c;
+    --border: #202225;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Whitney', 'Helvetica Neue', sans-serif;
+}
+
+.card, .project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+}
+
+.btn-primary {
+    background-color: var(--discord-blurple);
+    color: white;
+}

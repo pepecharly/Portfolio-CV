@@ -1,0 +1,24 @@
+/* styles/themes/claro.css */
+:root {
+    --bg: #ffffff;
+    --card-bg: #f9f9f9;
+    --text: #1a1a1a;
+    --btn-primary: #4a90e2;
+    --btn-secondary: #e6e6e6;
+    --border: #ccc;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.card, .project-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: white;
+}

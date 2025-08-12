@@ -1,0 +1,12 @@
+
+## 🛠 Tecnologías
+
+- HTML5, CSS3, JavaScript ES6
+- [html2pdf.js](https://github.com/eKoopmans/html2pdf.js) para PDF
+- [docx.js](https://github.com/dolanmiu/docx) para DOCX
+- Font Awesome (iconos)
+- Tailwind CSS (opcional)
+
+## 📄 Licencia
+
+MIT
